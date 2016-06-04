@@ -1,5 +1,7 @@
 <?php
 
+$lifetime=3600;
+session_set_cookie_params($lifetime);
 session_start();
 
 if(isset($_POST['logout'])) {
@@ -13,9 +15,9 @@ if(isset($_POST['logout'])) {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Support portal for Minecraftly">
+  <meta name="description" content="Minecraftly Dashboard">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Minecraftly | Support Portal</title>
+  <title>Minecraftly | Dashboard</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
 </head>
   
