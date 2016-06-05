@@ -1,6 +1,6 @@
 <?php
 
-$lifetime=3600;
+$lifetime=86400;
 session_set_cookie_params($lifetime);
 session_start();
 
@@ -45,10 +45,9 @@ if(isset($_POST['logout'])) {
 	        <script>
 	      	  window.intercomSettings = {
  	      	   app_id: "t02jhyr0",
- 	      	   name: "<?php echo $_SESSION['username']; ?>", // Minecraft username
+ 	      	   name: "<?php echo $_SESSION['username']; ?>", // Minecraft username, people change username everyday so it needs to be updated based on UUID
 	      	    user_id: "<?php echo $_SESSION['uuid']; ?>", // Minecraft UUID
 	      	    email: "<?php echo $_SESSION['email']; ?>", // Email address
- 	      	   created_at: <?php echo time(); ?> // Signup date as a Unix timestamp
  	      	 };
 	      	</script>
     <?php
